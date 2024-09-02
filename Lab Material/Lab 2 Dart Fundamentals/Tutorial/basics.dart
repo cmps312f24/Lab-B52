@@ -34,4 +34,10 @@ void main(List<String> args) {
   };
 
   print(person['name']);
+
+  // const and final
+
+  final int x;
+  x = 10;
+  print(x);
 }

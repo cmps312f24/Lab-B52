@@ -48,6 +48,11 @@ class MyApp extends StatelessWidget {
             const SizedBox(height: 20),
             Image.network(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7_NqNG8mhl2cVrfBudJ78tluJz2T0oaV11USQCJFt9vKpO4lM4lY7VSjQ6AhhzQKOhXM&usqp=CAU'),
+
+            //from assets
+            Image.asset('images/sca.png'),
+
+            Switch(value: false, onChanged: (the) => {})
           ],
         ),
       ),

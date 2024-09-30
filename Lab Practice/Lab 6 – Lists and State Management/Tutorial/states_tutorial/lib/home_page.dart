@@ -8,24 +8,41 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var textFieldInput = '';
+  var firstInput = 0.0;
+  var secondInput = 0.0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextField(
-            onChanged: (value) {
-              textFieldInput = value;
-              setState(() {              
-              });
-              print('textFieldInput : $textFieldInput');
-            },
-          ),
-          Text('Display : $textFieldInput'),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+              onChanged: (value) {
+                setState(() {
+                  firstInput = double.parse(value);
+                });
+              },
+            ),
+            const SizedBox(height: 20),
+            TextField(
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+              onChanged: (value) {
+                setState(() {
+                  secondInput = double.parse(value);
+                });
+              },
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'Result : ${firstInput + secondInput}',
+              style: const TextStyle(fontSize: 20),
+            ),
+          ],
+        ),
       ),
     );
   }

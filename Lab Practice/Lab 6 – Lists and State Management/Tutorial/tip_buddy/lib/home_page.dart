@@ -9,9 +9,21 @@ class TipCalculator extends StatefulWidget {
 
 class _TipCalculatorState extends State<TipCalculator> {
   final TextEditingController _controller = TextEditingController();
-  final int _tipPercentage = 0;
+
+  int _tipPercentage = 0;
+  var _billAmount = 0.0;
+  bool roundUp = false;
 
   final tips = [10, 20, 30];
+
+  double _getTipAmount() {
+    if (_billAmount == 0.0 || _tipPercentage == 0) return 0.0;
+
+    var tipAmount = _billAmount * _tipPercentage / 100;
+    if (roundUp) tipAmount = tipAmount.ceilToDouble();
+
+    return tipAmount;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +43,11 @@ class _TipCalculatorState extends State<TipCalculator> {
           const SizedBox(height: 20),
           TextField(
             controller: _controller,
-            onChanged: (value) {},
+            onChanged: (value) {
+              setState(() {
+                _billAmount = double.parse(value);
+              });
+            },
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Bill amount',
@@ -59,6 +75,9 @@ class _TipCalculatorState extends State<TipCalculator> {
 
                 onChanged: (value) {
                   // TODO: Implement the on Changed method
+                  setState(() {
+                    _tipPercentage = value!;
+                  });
                 },
               )),
           Row(
@@ -70,9 +89,11 @@ class _TipCalculatorState extends State<TipCalculator> {
               ),
               const SizedBox(width: 10),
               Switch(
-                value: true,
+                value: roundUp,
                 onChanged: (bool value) {
-                  // TODO: Implement this method
+                  setState(() {
+                    roundUp = value;
+                  });
                 },
               ),
             ],
@@ -92,12 +113,12 @@ class _TipCalculatorState extends State<TipCalculator> {
             onPressed: () {},
             child: GestureDetector(
               onTap: () {},
-              child: const SizedBox(
+              child: SizedBox(
                 height: 80,
                 child: Center(
                   child: Text(
-                    'Total Tip is \$0.00',
-                    style: TextStyle(
+                    'Total Tip is ${_getTipAmount()}',
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

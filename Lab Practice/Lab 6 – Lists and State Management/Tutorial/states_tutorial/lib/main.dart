@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:states_tutorial/home_page.dart';
+import 'package:states_tutorial/home_page_controller.dart';
 
 void main() {
   runApp(const MyApp());

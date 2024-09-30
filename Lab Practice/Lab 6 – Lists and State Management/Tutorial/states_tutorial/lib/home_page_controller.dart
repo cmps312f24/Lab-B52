@@ -8,8 +8,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var firstInput = 0.0;
-  var secondInput = 0.0;
+  var _fistInputController = TextEditingController();
+  var _secondInputController = TextEditingController();
+
   var addButtonResult = 0.0;
   @override
   Widget build(BuildContext context) {
@@ -22,34 +23,26 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             TextField(
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              onChanged: (value) {
-                setState(() {
-                  firstInput = double.parse(value);
-                });
-              },
+              controller: _fistInputController,
             ),
             const SizedBox(height: 20),
             TextField(
               decoration: const InputDecoration(border: OutlineInputBorder()),
-              onChanged: (value) {
-                setState(() {
-                  secondInput = double.parse(value);
-                });
-              },
+              controller: _secondInputController,
             ),
             const SizedBox(height: 20),
             ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    addButtonResult = firstInput + secondInput;
+                    addButtonResult = double.parse(_fistInputController.text) +
+                        double.parse(_secondInputController.text);
+
+                    _fistInputController.clear();
+                    _secondInputController.clear();
                   });
                 },
                 child: const Text('+')),
             const SizedBox(height: 20),
-            Text(
-              'Auto Result : ${firstInput + secondInput}',
-              style: const TextStyle(fontSize: 20),
-            ),
             Text(
               'Button Add Result : $addButtonResult',
               style: const TextStyle(fontSize: 20),

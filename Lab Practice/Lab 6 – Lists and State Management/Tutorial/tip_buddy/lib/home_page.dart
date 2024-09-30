@@ -31,7 +31,7 @@ class _TipCalculatorState extends State<TipCalculator> {
           const SizedBox(height: 20),
           TextField(
             controller: _controller,
-            onChanged: _calculateTip,
+            onChanged: (value) {},
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Bill amount',

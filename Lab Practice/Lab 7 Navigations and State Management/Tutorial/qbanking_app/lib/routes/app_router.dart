@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:qbanking_app/model/account.dart';
 import 'package:qbanking_app/screens/account_screen.dart';
 import 'package:qbanking_app/screens/home_screen.dart';
 

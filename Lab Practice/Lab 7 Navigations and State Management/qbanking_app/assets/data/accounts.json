@@ -1,0 +1,18 @@
+[
+    {
+        "accountNo": "ACC12345",
+        "firstName": "Ahmed",
+        "lastName": "Ali",
+        "type": "Savings",
+        "balance": 3156.988,
+        "cid": 10001
+    },
+    {
+        "accountNo": "ACC12346",
+        "firstName": "Ahmed",
+        "lastName": "Ali",
+        "type": "Current",
+        "balance": 2000.66,
+        "cid": 10001
+    }
+]

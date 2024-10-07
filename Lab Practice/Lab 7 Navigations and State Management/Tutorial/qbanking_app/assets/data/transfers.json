@@ -1,0 +1,26 @@
+[
+    {
+        "fromAccountNo": "ACC12345",
+        "amount": 320.7482081469311,
+        "beneficiaryName": "Fatima Khan",
+        "beneficiaryAccountNo": "ACC23456",
+        "transferId": "41853",
+        "cid": 10001
+    },
+    {
+        "fromAccountNo": "ACC23456",
+        "amount": 618.6954214624483,
+        "beneficiaryName": "Yusuf Ibrahim",
+        "beneficiaryAccountNo": "ACC34567",
+        "transferId": "10410",
+        "cid": 10002
+    },
+    {
+        "fromAccountNo": "ACC34567",
+        "amount": 409.60665787032343,
+        "beneficiaryName": "Ahmed Ali",
+        "beneficiaryAccountNo": "ACC12345",
+        "transferId": "90603",
+        "cid": 10003
+    }
+]

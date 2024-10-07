@@ -1,13 +1,17 @@
 import 'package:go_router/go_router.dart';
 import 'package:qbanking_app/model/account.dart';
+import 'package:qbanking_app/model/transfer.dart';
 import 'package:qbanking_app/screens/account_screen.dart';
+import 'package:qbanking_app/screens/deposit_screen.dart';
 import 'package:qbanking_app/screens/home_screen.dart';
+import 'package:qbanking_app/screens/transactions_screen.dart';
+import 'package:qbanking_app/screens/transfer_screen.dart';
 
 class AppRouter {
   //good coding practice to avoid mistakes
   static const home = (name: 'home', path: '/');
   static const account = (name: 'account', path: 'account');
-  static const deposit = (name: 'deposit', path: 'deposit');
+  static const deposit = (name: 'deposit', path: 'deposit:accountNo');
   static const transfer = (name: 'transfer', path: 'transfer');
   static const transactions = (name: 'transactions', path: 'transactions');
 
@@ -25,6 +29,24 @@ class AppRouter {
               name: account.name,
               path: account.path,
               builder: (context, state) => const AccountScreen(),
+            ),
+            GoRoute(
+              name: deposit.name,
+              path: deposit.path,
+              builder: (context, state) {
+                final accountNo = state.pathParameters['accountNo'] ?? '';
+                return DepositScreen(accountNo: accountNo);
+              },
+            ),
+            GoRoute(
+              name: transfer.name,
+              path: transfer.path,
+              builder: (context, state) => const TransferScreen(),
+            ),
+            GoRoute(
+              name: transactions.name,
+              path: transactions.path,
+              builder: (context, state) => const TransactionsScreen(),
             ),
           ]),
     ],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qbanking_app/screens/home_screen.dart';
-import 'package:qbanking_app/screens/shell_screen.dart';
+import 'package:qbanking_app/routes/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +11,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ShellScreen(child: HomeScreen()),
     );
   }
 }

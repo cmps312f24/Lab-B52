@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:qbanking_app/routes/app_router.dart';
 
 class ShellScreen extends StatelessWidget {
   final Widget? child;
@@ -36,9 +38,9 @@ class ShellScreen extends StatelessWidget {
         ],
         onTap: (index) {
           if (index == 0) {
-            //todo  add navigation
+            context.go(AppRouter.home.path);
           } else {
-            //todo add navigation
+            context.goNamed(AppRouter.account.name);
           }
         },
       ),

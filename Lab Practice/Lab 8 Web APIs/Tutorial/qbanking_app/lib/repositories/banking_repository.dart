@@ -90,6 +90,12 @@ class BankingRepository {
   }
 
   Future<bool> removeTransfer(Transfer transfer) async {
+    Response response = await _dio
+        .delete('$_baseUrl/transfers/${transfer.cid}/${transfer.transferId}');
+    if (response.statusCode != 200) {
+      throw Exception('Failed to remove transfer');
+    }
+
     return true;
   }
 }

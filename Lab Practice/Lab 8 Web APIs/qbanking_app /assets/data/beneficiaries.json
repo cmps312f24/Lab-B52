@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Ahmed Ali",
+        "accountNo": "ACC12345",
+        "cid": 10001
+    },
+    {
+        "name": "Fatima Khan",
+        "accountNo": "ACC23456",
+        "cid": 10002
+    },
+    {
+        "name": "Yusuf Ibrahim",
+        "accountNo": "ACC34567",
+        "cid": 10003
+    },
+    {
+        "name": "Hassan Ahmed",
+        "accountNo": "ACC45678",
+        "cid": 10004
+    },
+    {
+        "name": "Aisha Khalid",
+        "accountNo": "ACC56789",
+        "cid": 10005
+    },
+    {
+        "name": "Ibrahim Musa",
+        "accountNo": "ACC67890",
+        "cid": 10006
+    }
+]

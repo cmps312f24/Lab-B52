@@ -77,6 +77,18 @@ class BankingRepository {
     return transfer;
   }
 
+  // add beneficiary
+  // update beneficiary
+
+  Future<Beneficiary> addBeneficiary(Beneficiary beneficiary) async {
+    final url = '$_baseUrl/beneficiaries/${beneficiary.cid}';
+    Response response = await _dio.post(url, data: beneficiary.toJson());
+    if (response.statusCode != 201) {
+      throw Exception('Failed to add beneficiary');
+    }
+    return beneficiary;
+  }
+
   Future<bool> removeTransfer(Transfer transfer) async {
     return true;
   }

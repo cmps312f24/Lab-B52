@@ -24,4 +24,13 @@ class Account {
       cid: map['cid'] ?? 10001,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'accountNo': accountNo,
+      'type': type,
+      'balance': balance,
+      'cid': cid,
+    };
+  }
 }

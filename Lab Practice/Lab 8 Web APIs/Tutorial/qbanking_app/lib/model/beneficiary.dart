@@ -17,4 +17,13 @@ class Beneficiary {
       cid: map['cid'] ?? 10001,
     );
   }
+
+  // Method to convert a Beneficiary object to a map
+  Map<String, dynamic> toJson() {
+    return {
+      'name': name,
+      'accountNo': accountNo,
+      'cid': cid,
+    };
+  }
 }

@@ -1,0 +1,122 @@
+[
+  {
+    "headline": "World awaits threatened attack on Iran",
+    "content": "Defiant rhetoric in Tehran on Army Day with Iranian president praising military strength and the ‘shattering’ of Israel.",
+    "image": "images_21.jpeg",
+    "category": "Politics",
+    "writer": "Al Jazeera Staff",
+    "publishDate": "2024-04-17"
+  },
+  {
+    "headline": "Iran sends drones, missiles towards Israel",
+    "content": "Iran’s semi-official Tasnim news agency reports that the Islamic Revolutionary Guard Corps has launched drones and missiles towards Israel.",
+    "image": "images_20.jpeg",
+    "category": "Politics",
+    "writer": "Al Jazeera Staff",
+    "publishDate": "2024-04-13"
+  },
+  {
+    "headline": "UN chief says Middle East ‘on the brink’",
+    "content": "Iran’s ambassador to the UN said its attack on Israel ‘was entirely in the exercise of Iran’s inherent right to self-defence’.",
+    "image": "images_19.jpeg",
+    "category": "Politics",
+    "writer": "Al Jazeera Staff",
+    "publishDate": "2024-04-14"
+  },
+  {
+    "headline": "Tesla's Strong Financial Results",
+    "content": "Tesla has released its latest financial results, which show a significant increase in revenue and profits.",
+    "image": "images_5.jpeg",
+    "category": "Business",
+    "writer": "David Williams",
+    "publishDate": "2023-10-18"
+  },
+  {
+    "headline": "Amazon's Workforce Expansion Plan",
+    "content": "Amazon has announced a new plan to expand its workforce by 100,000 jobs.",
+    "image": "images_6.jpeg",
+    "category": "Business",
+    "writer": "Susan Brown",
+    "publishDate": "2023-10-19"
+  },
+  {
+    "headline": "Meta's Quarterly Revenue Decline",
+    "content": "Meta has reported its first quarterly revenue decline since going public in 2012.",
+    "image": "images_7.png",
+    "category": "Business",
+    "writer": "Michael Miller",
+    "publishDate": "2023-10-12"
+  },
+  {
+    "headline": "Supreme Court Reverses Roe v. Wade",
+    "content": "The Supreme Court has overturned Roe v. Wade, the landmark ruling that legalized abortion nationwide.",
+    "image": "images_2.jpeg",
+    "category": "Politics",
+    "writer": "Jane Doe",
+    "publishDate": "2023-8-14"
+  },
+  {
+    "headline": "House Passes Assault Weapons Ban",
+    "content": "The House of Representatives has passed a bill to ban assault weapons.",
+    "image": "images_3.jpeg",
+    "category": "Politics",
+    "writer": "Peter Jones",
+    "publishDate": "2023-7-14"
+  },
+  {
+    "headline": "Senate Confirms Ketanji Brown Jackson",
+    "content": "The Senate has voted to confirm Ketanji Brown Jackson as the first Black woman to serve on the Supreme Court.",
+    "image": "images_4.jpeg",
+    "category": "Politics",
+    "writer": "Mary Johnson",
+    "publishDate": "2023-10-15"
+  },
+  {
+    "headline": "Federal Reserve Raises Interest Rates",
+    "content": "The Federal Reserve has raised interest rates by 0.75 percentage points in an effort to combat inflation.",
+    "image": "images_8.jpeg",
+    "category": "Business",
+    "writer": "Elizabeth Jones",
+    "publishDate": "2023-10-1"
+  },
+  {
+    "headline": "Google's New AI Chip Announcement",
+    "content": "Google has announced the development of a new AI chip that is expected to be significantly faster and more efficient than existing chips.",
+    "image": "images_11.jpeg",
+    "category": "Technology",
+    "writer": "William Smith",
+    "publishDate": "2023-10-14"
+  },
+  {
+    "headline": "Apple's Latest iPhone Release",
+    "content": "Apple has released its latest iPhone, which is expected to be available in stores next month.",
+    "image": "images_13.jpeg",
+    "category": "Technology",
+    "writer": "Sarah Williams",
+    "publishDate": "2023-11-14"
+  },
+  {
+    "headline": "Microsoft's Partnership with Google",
+    "content": "Microsoft has announced a new partnership with Google to develop cloud computing solutions.",
+    "image": "images_15.jpeg",
+    "category": "Technology",
+    "writer": "John Smith",
+    "publishDate": "2023-8-14"
+  },
+  {
+    "headline": "Elon Musk's Acquisition of Twitter",
+    "content": "Elon Musk has acquired Twitter for 44 Billion dollars",
+    "image": "images_17.jpeg",
+    "category": "Technology",
+    "writer": "Jane Doe",
+    "publishDate": "2023-10-14"
+  },
+  {
+    "headline": "Biden's Climate Plan Announcement",
+    "content": "President Biden has announced a new plan to address the climate crisis.",
+    "image": "images_1.jpeg",
+    "category": "Politics",
+    "writer": "John Smith",
+    "publishDate": "2023-9-14"
+  }
+]

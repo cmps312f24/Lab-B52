@@ -2,6 +2,16 @@ import 'package:floor/floor.dart';
 import 'package:todo_list_base/model/project.dart';
 
 // todo : add the @Entity annotation with ForeignKey
+@Entity(
+  tableName: 'todos',
+  foreignKeys: [
+    ForeignKey(
+      childColumns: ['pid'],
+      parentColumns: ['id'],
+      entity: Project,
+    ),
+  ],
+)
 class Todo {
   // id, title, status, priority, data , time, pid
   @PrimaryKey(autoGenerate: true)

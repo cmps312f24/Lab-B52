@@ -1,8 +1,10 @@
 import 'package:floor/floor.dart';
 
 // Todo : add the @entity annotation
+@Entity(tableName: 'projects')
 class Project {
 // Todo add the @PrimaryKey annotation with autoGenerate: true
+  @PrimaryKey(autoGenerate: true)
   final int?
       id; //important to keep this guy nullable, so we can generate the id
 

@@ -4,8 +4,8 @@ import 'package:floor/floor.dart';
 @DatabaseView('''
   SELECT 
     p.id AS id,
-    IFNULL(SUM(CASE WHEN t.status = 'pending' THEN 1 ELSE 0 END), 0) as pendingCount,
-    IFNULL(SUM(CASE WHEN t.status = 'completed' THEN 1 ELSE 0 END), 0) as completedCount
+    IFNULL(SUM(CASE WHEN t.status = 'pending' THEN 1 ELSE 0 END), 0) AS pendingCount,
+    IFNULL(SUM(CASE WHEN t.status = 'completed' THEN 1 ELSE 0 END), 0) AS completedCount
   FROM projects p
   LEFT JOIN todos t ON p.id = t.pid
   GROUP BY p.id

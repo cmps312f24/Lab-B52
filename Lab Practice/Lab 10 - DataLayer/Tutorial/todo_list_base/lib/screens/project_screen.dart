@@ -14,6 +14,8 @@ class ProjectScreen extends ConsumerWidget {
     // Explain the projectProvider which return the list of projects
     final projectProvider = ref.watch(projectNotifierProvider);
 
+    // projectProvider.when(data: (data) => {}, loading: () => , error: (error, stack) => );
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Projects'),

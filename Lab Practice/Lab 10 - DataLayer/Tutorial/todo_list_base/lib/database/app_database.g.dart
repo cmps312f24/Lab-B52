@@ -178,9 +178,8 @@ class _$ProjectDao extends ProjectDao {
   }
 
   @override
-  Stream<List<ProjectTodoStatusCounts?>> observeProjectTodoStatusCounts(
-      int pid) {
-    return _queryAdapter.queryListStream(
+  Stream<ProjectTodoStatusCounts?> observeProjectTodoStatusCounts(int pid) {
+    return _queryAdapter.queryStream(
         'SELECT * FROM ProjectTodoStatusCounts WHERE id = ?1',
         mapper: (Map<String, Object?> row) => ProjectTodoStatusCounts(
             id: row['id'] as int,
@@ -267,7 +266,7 @@ class _$TodoDao extends TodoDao {
   final DeletionAdapter<Todo> _todoDeletionAdapter;
 
   @override
-  Stream<List<Todo?>> observeTodos(int pid) {
+  Stream<List<Todo>> observeTodos(int pid) {
     return _queryAdapter.queryListStream('SELECT * FROM todos WHERE pid = ?1',
         mapper: (Map<String, Object?> row) => Todo(
             row['id'] as int?,

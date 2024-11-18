@@ -9,7 +9,7 @@ import 'package:floor/floor.dart';
   FROM projects p
   LEFT JOIN todos t ON p.id = t.pid
   GROUP BY p.id
-''')
+''', viewName: 'ProjectTodoStatusCounts')
 class ProjectTodoStatusCounts {
   @primaryKey
   final int id;

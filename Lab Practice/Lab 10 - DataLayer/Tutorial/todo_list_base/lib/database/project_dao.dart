@@ -20,6 +20,6 @@ abstract class ProjectDao {
   @delete
   Future<void> deleteProject(Project project);
 
-  @Query('SELECT * FROM ProjectTodoStatusCounts WHERE id = :pid')
+  @Query('SELECT * FROM projects WHERE id = :pid')
   Stream<ProjectTodoStatusCounts?> observeProjectTodoStatusCounts(int pid);
 }

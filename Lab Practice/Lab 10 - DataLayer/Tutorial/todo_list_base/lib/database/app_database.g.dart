@@ -82,7 +82,7 @@ class _$AppDatabase extends AppDatabase {
     Callback? callback,
   ]) async {
     final databaseOptions = sqflite.OpenDatabaseOptions(
-      version: 1,
+      version: 2,
       onConfigure: (database) async {
         await database.execute('PRAGMA foreign_keys = ON');
         await callback?.onConfigure?.call(database);
@@ -179,14 +179,13 @@ class _$ProjectDao extends ProjectDao {
 
   @override
   Stream<ProjectTodoStatusCounts?> observeProjectTodoStatusCounts(int pid) {
-    return _queryAdapter.queryStream(
-        'SELECT * FROM ProjectTodoStatusCounts WHERE id = ?1',
+    return _queryAdapter.queryStream('SELECT * FROM projects WHERE id = ?1',
         mapper: (Map<String, Object?> row) => ProjectTodoStatusCounts(
             id: row['id'] as int,
             pendingCount: row['pendingCount'] as int,
             completedCount: row['completedCount'] as int),
         arguments: [pid],
-        queryableName: 'ProjectTodoStatusCounts',
+        queryableName: 'projects',
         isView: true);
   }
 

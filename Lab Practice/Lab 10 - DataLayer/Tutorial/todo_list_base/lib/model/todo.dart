@@ -9,6 +9,8 @@ import 'package:todo_list_base/model/project.dart';
       childColumns: ['pid'],
       parentColumns: ['id'],
       entity: Project,
+      onDelete: ForeignKeyAction.cascade,
+      onUpdate: ForeignKeyAction.cascade
     ),
   ],
 )

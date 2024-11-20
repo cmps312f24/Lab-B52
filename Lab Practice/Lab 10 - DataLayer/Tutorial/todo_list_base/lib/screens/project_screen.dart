@@ -12,9 +12,7 @@ class ProjectScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // Explain the projectProvider which return the list of projects
-    final projectProvider = ref.watch(projectNotifierProvider);
-
-    // projectProvider.when(data: (data) => {}, loading: () => , error: (error, stack) => );
+   
 
     return Scaffold(
       appBar: AppBar(

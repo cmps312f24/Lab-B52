@@ -10,7 +10,7 @@ abstract class TodoDao {
   @Query('SELECT * FROM todos WHERE id = :tid')
   Future<Todo?> findTodoById(int tid);
 
-  @insert
+  @Insert(onConflict: OnConflictStrategy.replace)
   Future<void> addTodo(Todo todo);
 
   @update

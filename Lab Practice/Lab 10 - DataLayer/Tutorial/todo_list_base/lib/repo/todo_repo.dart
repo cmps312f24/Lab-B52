@@ -27,6 +27,6 @@ class TodoListRepo {
   Future<Todo?> findTodoById(int tid) => todoDao.findTodoById(tid);
   Future<void> addTodo(Todo todo) => todoDao.addTodo(todo);
   Future<void> updateTodo(Todo todo) => todoDao.updateTodo(todo);
-
+  
   Future<void> deleteTodo(Todo todo) => todoDao.deleteTodo(todo);
 }

@@ -27,15 +27,20 @@ class TodoListRepo {
         }
       });
   Future<void> addProject(Project project) async {
-    var docId = projectRef.doc().id;
-    project.id = docId;
-    await projectRef.doc(docId).set(project.toMap());
+    var docId = projectRef.doc().id; //empty document
+    project.id = docId; //assign the id to the project
+    await projectRef
+        .doc(docId)
+        .set(project.toMap()); //save the project to the database
   }
 
+  Future<void> updateProject(Project project) => projectRef
+      .doc(project.id)
+      .update(project.toMap()); //update the project in the database
 
-  Future<void> updateProject(Project project);
-
-  Future<void> deleteProject(Project project);
+  Future<void> deleteProject(Project project) => projectRef
+      .doc(project.id)
+      .delete(); //delete the project from the database
 
   // todos
 
@@ -47,7 +52,6 @@ class TodoListRepo {
   }
 
   Future<void> addTodo(Todo todo);
-
   Future<void> updateTodo(Todo todo);
   Future<void> deleteTodo(Todo todo);
   Stream<ProjectTodoStatusCounts?> getProjectTodosStatusCounts(

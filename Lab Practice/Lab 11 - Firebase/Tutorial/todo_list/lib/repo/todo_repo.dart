@@ -11,9 +11,27 @@ class TodoListRepo {
   TodoListRepo({required this.projectRef, required this.todoRef});
 
   // projects
-  Stream<List<Project>> observeProjects();
-  Future<Project?> getProjectById(String id);
-  Future<void> addProject(Project project);
+  Stream<List<Project>> observeProjects() =>
+      projectRef.snapshots().map((snapshot) {
+        return snapshot.docs
+            .map((doc) => Project.fromMap(doc.data() as Map<String, dynamic>))
+            .toList();
+      });
+
+  Future<Project?> getProjectById(String id) =>
+      projectRef.doc(id).get().then((snapshot) {
+        if (snapshot.exists) {
+          return Project.fromMap(snapshot.data() as Map<String, dynamic>);
+        } else {
+          return null;
+        }
+      });
+  Future<void> addProject(Project project) async {
+    var docId = projectRef.doc().id;
+    project.id = docId;
+    await projectRef.doc(docId).set(project.toMap());
+  }
+
 
   Future<void> updateProject(Project project);
 

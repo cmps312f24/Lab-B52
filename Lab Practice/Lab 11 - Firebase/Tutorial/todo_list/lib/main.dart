@@ -4,8 +4,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_list/firebase_options.dart';
 import 'package:todo_list/router/app_router.dart';
 
-void main() {
+void main() async {
   // Initialize the database
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const ProviderScope(overrides: [], child: MyApp()));
 }
 
